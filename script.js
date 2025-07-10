@@ -279,7 +279,6 @@ document.addEventListener('DOMContentLoaded', function() {
   mobileMenu();
   scrollEffects();
   scrollAnimations();
-  cvModal();
   contactForm();
   updateYear();
   backToTop();
