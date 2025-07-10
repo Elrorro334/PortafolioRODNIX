@@ -54,6 +54,14 @@
         }
     </style>
 </head>
+<script>
+  const acceso = localStorage.getItem("formularioEnviado");
+  if (acceso !== "true") {
+    window.location.href = "index.html"; // o "/" si estás en raíz
+  } else {
+    localStorage.removeItem("formularioEnviado");
+  }
+</script>
 <body>
     <div class="gracias-container">
         <div class="icon">✓</div>

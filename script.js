@@ -207,6 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // Mostrar mensaje de éxito aunque la respuesta no sea JSON
           showSuccessMessage();
           form.reset();
+          localStorage.setItem("formularioEnviado", "true");
           
           formResponse.textContent = '¡Mensaje enviado con éxito!';
           formResponse.className = 'form-response success';
