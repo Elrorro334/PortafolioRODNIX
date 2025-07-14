@@ -1,69 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Favicon -->
+  <!-- 1) Favicon -->
   <link rel="icon" href="logoRODNIX.jpg" type="image/x-icon">
   <link rel="shortcut icon" href="logoRODNIX.jpg" type="image/x-icon">
 
+  <!-- 2) Meta esenciales -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rodrigo Sánchez Cruz | Desarrollador Web Full Stack</title>
-  
-  <!-- SEO ESSENTIALS -->
-  <meta name="description" content="Portafolio profesional de Rodrigo Sánchez Cruz (Rodnix), desarrollador web full stack en México. Especialista en JavaScript, React, Node.js, .NET y soluciones tecnológicas personalizadas.">
-  <meta name="keywords" content="desarrollador web, portafolio, Full Stack, JavaScript, React, Node.js, .NET, SQL, México, programación, Rodnix, soluciones digitales, desarrollo móvil, Flutter">
+  <meta name="description" content="Portafolio de Rodrigo Sánchez Cruz (Rodnix): desarrollo web y apps a medida en México con JavaScript, React, Node.js, .NET y Flutter.">
+  <meta name="keywords" content="Desarrollador Web, Full Stack, JavaScript, React, Node.js, .NET, Flutter, Portafolio, México, Rodnix">
   <meta name="author" content="Rodrigo Sánchez Cruz">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.rodnix.com.mx/">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.rodnix.com.mx/" />
+  <!-- 3) Preconnect / DNS Prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Rodrigo Sánchez Cruz | Desarrollador Web Full Stack">
-  <meta property="og:description" content="Potencia tu negocio con soluciones digitales de alto nivel: portafolio de Rodrigo Sánchez Cruz, especialista en web y apps a medida.">
-  <meta property="og:image" content="https://www.rodnix.com.mx/logoRODNIX.jpg">
-  <meta property="og:url" content="https://www.rodnix.com.mx/">
-  <meta property="og:site_name" content="Rodnix">
-  <meta property="og:locale" content="es_MX">
+  <!-- 4) Fuentes -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rodrigo Sánchez Cruz | Desarrollador Web Full Stack">
-  <meta name="twitter:description" content="Portafolio de soluciones digitales personalizadas. Descubre proyectos web, móviles y empresariales desarrollados en México.">
-  <meta name="twitter:image" content="https://www.rodnix.com.mx/logoRODNIX.jpg">
-  <meta name="twitter:site" content="@RodnixDev">
-  <meta name="twitter:creator" content="@RodnixDev">
+  <!-- 5) Iconos y CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" as="style">
 
-  <!-- MICRODATOS SCHEMA.ORG (PERSON) -->
+  <!-- 6) Open Graph / Twitter Card -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Rodrigo Sánchez Cruz | Desarrollador Web Full Stack">
+  <meta property="og:description" content="Soluciones web y móviles a medida: portafolio de Rodnix, experto en JavaScript, React, Node.js, .NET y Flutter.">
+  <meta property="og:image"       content="https://www.rodnix.com.mx/logoRODNIX.jpg">
+  <meta property="og:url"         content="https://www.rodnix.com.mx/">
+  <meta property="og:site_name"   content="Rodnix">
+  <meta property="og:locale"      content="es_MX">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Rodrigo Sánchez Cruz | Desarrollador Web Full Stack">
+  <meta name="twitter:description" content="Descubre proyectos web y apps desarrollados por Rodnix en México.">
+  <meta name="twitter:image"       content="https://www.rodnix.com.mx/logoRODNIX.jpg">
+  <meta name="twitter:site"        content="@RodnixDev">
+  <meta name="twitter:creator"     content="@RodnixDev">
+
+  <!-- 7) Alternate languages -->
+  <link rel="alternate" hreflang="es-MX" href="https://www.rodnix.com.mx/">
+  <link rel="alternate" hreflang="en"    href="https://www.rodnix.com.mx/en/">
+
+  <!-- 8) Sitemap -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+  <!-- 9) Theme color (navegadores móviles) -->
+  <meta name="theme-color" content="#092432">
+
+  <!-- 10) JSON-LD: Website + SearchAction + BreadcrumbList + Person + LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Rodrigo Sánchez Cruz",
-    "alternateName": "Rodnix",
-    "jobTitle": "Desarrollador Web Full Stack",
-    "image": "https://www.rodnix.com.mx/foto.jpg",
-    "url": "https://www.rodnix.com.mx/",
-    "sameAs": [
-      "https://github.com/Elrorro334",
-      "https://www.linkedin.com/in/rodrigo-sanchez-cruz-925785327",
-      "https://www.instagram.com/el_rorro334/",
-      "https://www.facebook.com/share/16w557j783/",
-      "https://wa.me/525626116825"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Rodnix"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Jilotepec",
-      "addressRegion": "Estado de México",
-      "addressCountry": "MX"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.rodnix.com.mx/#website",
+        "url": "https://www.rodnix.com.mx/",
+        "name": "Rodnix",
+        "description": "Portafolio y servicios de desarrollo web y móvil a medida.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.rodnix.com.mx/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio",  "item": "https://www.rodnix.com.mx/" },
+          { "@type": "ListItem", "position": 2, "name": "Sobre mí", "item": "https://www.rodnix.com.mx/#about" },
+          { "@type": "ListItem", "position": 3, "name": "Proyectos","item": "https://www.rodnix.com.mx/#projects" },
+          { "@type": "ListItem", "position": 4, "name": "Contacto","item": "https://www.rodnix.com.mx/#contact" }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.rodnix.com.mx/#person",
+        "name": "Rodrigo Sánchez Cruz",
+        "alternateName": "Rodnix",
+        "image": "https://www.rodnix.com.mx/foto.jpg",
+        "jobTitle": "Desarrollador Web Full Stack",
+        "url": "https://www.rodnix.com.mx/",
+        "sameAs": [
+          "https://github.com/Elrorro334",
+          "https://www.linkedin.com/in/rodrigo-sanchez-cruz-925785327",
+          "https://www.instagram.com/el_rorro334/",
+          "https://www.facebook.com/share/16w557j783/",
+          "https://wa.me/525626116825"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.rodnix.com.mx/#business",
+        "name": "Rodnix",
+        "image": "https://www.rodnix.com.mx/logoRODNIX.jpg",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "",
+          "addressLocality": "Jilotepec",
+          "addressRegion": "Estado de México",
+          "addressCountry": "MX"
+        },
+        "telephone": "+525626116825",
+        "url": "https://www.rodnix.com.mx/",
+        "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00"
+      }
+    ]
   }
   </script>
-
+  
   <!-- Preload de fuentes -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" as="style">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap">
