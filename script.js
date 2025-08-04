@@ -7,13 +7,11 @@ document.addEventListener('contextmenu', function (e) {
   e.preventDefault();
 });
 
-// Bloquear atajos comunes de devtools
-document.addEventListener('keydown', function (e) {
-  // F12, Ctrl+Shift+I/J/C, Ctrl+U
+document.addEventListener('keydown', (e) => {
   if (
     e.key === 'F12' ||
-    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
-    (e.ctrlKey && e.key === 'U')
+    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+    (e.ctrlKey && e.key === 'u')
   ) {
     e.preventDefault();
     e.stopPropagation();
