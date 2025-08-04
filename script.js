@@ -1,5 +1,37 @@
 // script.js
 
+// ------------------ Bloqueo de inspección básico (no infalible) ------------------
+
+// Bloquear clic derecho
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Bloquear atajos comunes de devtools
+document.addEventListener('keydown', function (e) {
+  // F12, Ctrl+Shift+I/J/C, Ctrl+U
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+});
+
+// Sobrescribir posibles reversiones mínimas
+document.oncontextmenu = function () { return false; };
+document.onkeydown = function (e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+    (e.ctrlKey && e.key === 'U')
+  ) {
+    return false;
+  }
+};
+
 // ------------------ Funciones públicas ------------------
 
 function setActiveNavFromPath() {
