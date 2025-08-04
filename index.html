@@ -1,447 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- 1) Favicon -->
-  <link rel="icon" href="logoRODNIX.jpg" type="image/x-icon">
-  <link rel="shortcut icon" href="logoRODNIX.jpg" type="image/x-icon">
-
-  <!-- 2) Meta esenciales -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rodrigo Sánchez Cruz | Desarrollador Web Full Stack</title>
-  <meta name="description" content="Portafolio de Rodrigo Sánchez Cruz (Rodnix): desarrollo web y apps a medida en México con JavaScript, React, Node.js, .NET y Flutter.">
-  <meta name="keywords" content="Desarrollador Web, Full Stack, JavaScript, React, Node.js, .NET, Flutter, Portafolio, México, Rodnix">
-  <meta name="author" content="Rodrigo Sánchez Cruz">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rodnix | Soluciones digitales a medida</title>
+  <meta name="description" content="Rodnix convierte tu idea en una app o sitio web personalizado. Desarrollo full stack, móvil y consultoría tecnológica en México.">
+  <link rel="icon" href="images/logoRODNIX.jpg" type="image/x-icon" />
   <link rel="canonical" href="https://www.rodnix.com.mx/">
-
-  <!-- 3) Preconnect / DNS Prefetch -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-
-  <!-- 4) Fuentes -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-  <!-- 5) Iconos y CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css" as="style">
-
-  <!-- 6) Open Graph / Twitter Card -->
-  <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Rodrigo Sánchez Cruz | Desarrollador Web Full Stack">
-  <meta property="og:description" content="Soluciones web y móviles a medida: portafolio de Rodnix, experto en JavaScript, React, Node.js, .NET y Flutter.">
-  <meta property="og:image"       content="https://www.rodnix.com.mx/logoRODNIX.jpg">
-  <meta property="og:url"         content="https://www.rodnix.com.mx/">
-  <meta property="og:site_name"   content="Rodnix">
-  <meta property="og:locale"      content="es_MX">
-
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Rodrigo Sánchez Cruz | Desarrollador Web Full Stack">
-  <meta name="twitter:description" content="Descubre proyectos web y apps desarrollados por Rodnix en México.">
-  <meta name="twitter:image"       content="https://www.rodnix.com.mx/logoRODNIX.jpg">
-  <meta name="twitter:site"        content="@RodnixDev">
-  <meta name="twitter:creator"     content="@RodnixDev">
-
-  <!-- 7) Alternate languages -->
-  <link rel="alternate" hreflang="es-MX" href="https://www.rodnix.com.mx/">
-  <link rel="alternate" hreflang="en"    href="https://www.rodnix.com.mx/en/">
-
-  <!-- 8) Sitemap -->
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-
-  <!-- 9) Theme color (navegadores móviles) -->
-  <meta name="theme-color" content="#092432">
-
-  <!-- 10) JSON-LD: Website + SearchAction + BreadcrumbList + Person + LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.rodnix.com.mx/#website",
-        "url": "https://www.rodnix.com.mx/",
-        "name": "Rodnix",
-        "description": "Portafolio y servicios de desarrollo web y móvil a medida.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.rodnix.com.mx/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Inicio",  "item": "https://www.rodnix.com.mx/" },
-          { "@type": "ListItem", "position": 2, "name": "Sobre mí", "item": "https://www.rodnix.com.mx/#about" },
-          { "@type": "ListItem", "position": 3, "name": "Proyectos","item": "https://www.rodnix.com.mx/#projects" },
-          { "@type": "ListItem", "position": 4, "name": "Contacto","item": "https://www.rodnix.com.mx/#contact" }
-        ]
-      },
-      {
-        "@type": "Person",
-        "@id": "https://www.rodnix.com.mx/#person",
-        "name": "Rodrigo Sánchez Cruz",
-        "alternateName": "Rodnix",
-        "image": "https://www.rodnix.com.mx/foto.jpg",
-        "jobTitle": "Desarrollador Web Full Stack",
-        "url": "https://www.rodnix.com.mx/",
-        "sameAs": [
-          "https://github.com/Elrorro334",
-          "https://www.linkedin.com/in/rodrigo-sanchez-cruz-925785327",
-          "https://www.instagram.com/el_rorro334/",
-          "https://www.facebook.com/share/16w557j783/",
-          "https://wa.me/525626116825"
-        ]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://www.rodnix.com.mx/#business",
-        "name": "Rodnix",
-        "image": "https://www.rodnix.com.mx/logoRODNIX.jpg",
-        "priceRange": "$$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "",
-          "addressLocality": "Jilotepec",
-          "addressRegion": "Estado de México",
-          "addressCountry": "MX"
-        },
-        "telephone": "+525626116825",
-        "url": "https://www.rodnix.com.mx/",
-        "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Preload de fuentes -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" as="style">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap">
-
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
   <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="…" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- SITEMAP Y ROBOTS -->
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-  <meta name="robots" content="index, follow">
-
-  <!-- ACCESIBILIDAD: Color scheme -->
-  <meta name="theme-color" content="#092432">
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <!-- Barra de navegación -->
-  <header class="header" itemscope itemtype="https://schema.org/WPHeader">
-    <nav class="navbar container" aria-label="Navegación principal">
-      <a href="#home" class="logo" aria-label="Inicio">
-        <img src="logoRODNIX.jpg" alt="Logotipo de Rodnix" width="50" height="50" itemprop="logo">
-      </a>
-      <button class="menu-toggle" aria-label="Menú" aria-expanded="false" aria-controls="nav-links">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="nav-link active">Inicio</a></li>
-        <li><a href="#about" class="nav-link">Sobre mí</a></li>
-        <li><a href="#projects" class="nav-link">Proyectos</a></li>
-        <li><a href="#contact" class="nav-link">Contacto</a></li>
-      </ul>
-    </nav>
+  <header class="header" aria-label="Navegación principal">
+    <div data-include="header"></div>
   </header>
-  <!-- Contenido principal -->
+
   <main>
-    <!-- Sección Hero -->
     <section class="hero" id="home">
       <div class="container hero-container">
-        <div class="hero-content fade-in">
-          <h1 class="hero-title">
-            <span class="greeting">Hola, soy</span>
-            <span class="name">Rodrigo Sánchez Cruz</span>
-          </h1>
-          
-          <div class="typewriter" id="typewriter" aria-hidden="true"></div>
-          <p class="hero-subtitle">Desarrollador Full Stack & Entusiasta de la Tecnología</p>
-          
+        <div class="hero-content">
+          <h1 class="hero-title">Rodnix</h1>
+          <p class="hero-subtitle">Convertimos tu idea en una aplicación o sitio web a medida. Desarrollo full stack, móvil y consultoría tecnológica.</p>
           <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">
-              <i class="fas fa-code"></i> Ver proyectos
-            </a>
-            <a href="#contact" class="btn btn-secondary">
-              <i class="fas fa-paper-plane"></i> Contactar
-            </a>
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Hablemos</a>
+            <a href="#projects" class="btn btn-secondary"><i class="fas fa-rocket"></i> Ver portafolio</a>
           </div>
+          <p style="margin-top:.75rem; font-size:.9rem;">¿Quieres conocer a la persona detrás de la marca? <a href="about.html" style="font-weight:600; color: var(--accent);">Sobre Rodrigo →</a></p>
         </div>
-        
-        <div class="hero-image fade-in delay-1">
-          <img src="foto.jpg" alt="Rodrigo Sánchez Cruz - Desarrollador Web" class="profile-img" width="400" height="500">
+        <div class="hero-image">
+          <img src="images/branding-placeholder.png" alt="Branding Rodnix" loading="lazy">
         </div>
       </div>
-      
-      <a href="#about" class="scroll-down" aria-label="Ir a la sección Sobre mí">
-        <i class="fas fa-chevron-down"></i>
-      </a>
     </section>
 
-    <!-- Sección Sobre mí -->
-    <section class="section about" id="about">
+    <section class="section" id="services">
       <div class="container">
-        <div class="section-header fade-in">
-          <h2 class="section-title">Sobre <span>mí</span></h2>
-          <p class="section-subtitle">Conoce más sobre mi trayectoria y habilidades</p>
+        <div class="section-header">
+          <h2 class="section-title">Qué hacemos</h2>
+          <p class="section-subtitle">Soluciones hechas a la medida para empresas y proyectos personales.</p>
         </div>
-        
-        <div class="about-content glass fade-in delay-1">
-          <div class="about-text">
-            <h3>¿Quién soy?</h3>
-            <p>
-              Soy <strong>Rodrigo Sánchez Cruz</strong>, también conocido como <strong>Rodnix</strong>, un apasionado desarrollador full stack con sede en México.
-            </p>
-            
-            <p>
-              <strong>Actualmente me especializo en el desarrollo de aplicaciones web y móviles</strong>, combinando mis conocimientos en frontend y backend para crear soluciones completas y escalables.
-            </p>
-            
-            <p>
-              Mi stack tecnológico incluye JavaScript, React, Node.js, .NET Framework y SQL Server, con experiencia adicional en desarrollo móvil con Kotlin y Flutter.
-            </p>
-            
-            <div class="skills">
-              <h4>Tecnologías principales:</h4>
-              <ul class="skills-list">
-                <li><span class="skill-tag">HTML5</span></li>
-                <li><span class="skill-tag">CSS3</span></li>
-                <li><span class="skill-tag">JavaScript (ES6+)</span></li>
-                <li><span class="skill-tag">React</span></li>
-                <li><span class="skill-tag">Node.js</span></li>
-                <li><span class="skill-tag">.NET Framework</span></li>
-                <li><span class="skill-tag">SQL Server</span></li>
-                <li><span class="skill-tag">Git</span></li>
-                <li><span class="skill-tag">Kotlin</span></li>
-                <li><span class="skill-tag">Flutter</span></li>
-                <li><span class="skill-tag">Bootstrap</span></li>
-                <li><span class="skill-tag">REST APIs</span></li>
-              </ul>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-info">
+              <h3>Desarrollo Web Full Stack</h3>
+              <p>Aplicaciones escalables con React, .NET y Node.js integradas con APIs y arquitectura sólida.</p>
             </div>
-            
-            <div class="facts">
-              <h4>Algunos datos sobre mí:</h4>
-              <ul>
-                <li>📍 Vivo en Jilotepec, Estado de México</li>
-                <li>🎵 Amante de la música y el diseño</li>
-                <li>🧠 Autodidacta y en constante aprendizaje</li>
-                <li>🚀 Apasionado por crear soluciones tecnológicas prácticas</li>
-                <li>💡 Experiencia en bases de datos como Northwind</li>
-              </ul>
+          </div>
+          <div class="project-card">
+            <div class="project-info">
+              <h3>Apps Móviles</h3>
+              <p>Soluciones nativas e híbridas con Flutter y Kotlin para Android y iOS.</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-info">
+              <h3>Consultoría Técnica</h3>
+              <p>Auditorías, optimización de performance y diseño de arquitectura efectiva.</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-info">
+              <h3>Automatización y Testing</h3>
+              <p>Pruebas, CI/CD y flujos automáticos para entregas confiables.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    </div>
-  <!-- Sección Proyectos y Actividades Escolares -->
-<section class="section projects" id="projects">
-  <div class="container">
-    <div class="section-header fade-in">
-      <h2 class="section-title">Proyectos y Actividades Escolares</h2>
-      <p class="section-subtitle">
-        Trabajo académico realizado en mi formación profesional. <br>
-      </p>
-    </div>
-    <div class="projects-grid">
-      <!-- PROYECTOS -->
-      <article class="project-card fade-in delay-1">
-        <div class="project-info">
-          <h3>Sistema de gestión de archivos de transparencia</h3>
-          <p>
-            <strong>Proyecto escolar:</strong> Sistema web en .NET Framework MVC para administrar archivos de transparencia. Incluye CRUD completo, gestión de apartados y segmentación anual.
-          </p>
-          <div class="project-tags">
-            <span class="tag">.NET</span>
-            <span class="tag">MVC</span>
-            <span class="tag">SQL Server</span>
-          </div>
-        </div>
-      </article>
-      <article class="project-card fade-in delay-2">
-        <div class="project-info">
-          <h3>App de estimación de costos para ventanas de aluminio</h3>
-          <p>
-            <strong>Proyecto escolar:</strong> Aplicación de escritorio en Flutter para calcular materiales y costos en la fabricación de ventanas/canceles de aluminio.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Flutter</span>
-            <span class="tag">Dart</span>
-            <span class="tag">Desktop App</span>
-          </div>
-        </div>
-      </article>
-      <!-- ACTIVIDADES -->
-      <article class="project-card fade-in delay-4">
-        <div class="project-info">
-          <h3>Automatización y pruebas de software</h3>
-          <p>
-            <strong>Actividad escolar:</strong> Planeación, documentación y ejecución de pruebas unitarias y funcionales en Java. Colaboración entre equipos de desarrollo y testing.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Testing</span>
-            <span class="tag">JUnit</span>
-            <span class="tag">Documentación</span>
-          </div>
-        </div>
-      </article>
 
-      <article class="project-card fade-in delay-5">
-        <div class="project-info">
-          <h3>Aplicaciones móviles básicas</h3>
-          <p>
-            <strong>Actividad escolar:</strong> Desarrollo de apps móviles en Android Studio con Kotlin y Java. Incluye prácticas de CRUD, consumo de servicios y UI responsiva.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Android Studio</span>
-            <span class="tag">Kotlin</span>
-            <span class="tag">Java</span>
-          </div>
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Proyectos destacados</h2>
+          <p class="section-subtitle">Muestra rápida de lo que ya se ha hecho, con impacto.</p>
         </div>
-      </article>
-    </div>
-    <br>
-    <h3 style="text-align: center;">Y los que faltan . . . .</h3>
-  </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-info">
+              <h3>Sistema de transparencia</h3>
+              <p>Sistema web en .NET MVC para administración de archivos, segmentado por año y apartado. Mejora de flujo académico.</p>
+              <div class="project-tags">
+                <span class="tag">.NET</span>
+                <span class="tag">MVC</span>
+                <span class="tag">SQL Server</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-info">
+              <h3>Estimador de ventanas</h3>
+              <p>App en Flutter para cálculo de materiales y costos en ventanas de aluminio.</p>
+              <div class="project-tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Desktop</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div style="text-align:center; margin-top:1rem;">
+          <a href="about.html" class="btn btn-outline">Ver más sobre Rodrigo</a>
+        </div>
+      </div>
+    </section>
 
-</section>
     <section class="section contact" id="contact">
       <div class="container">
-        <div class="section-header fade-in">
+        <div class="section-header">
           <h2 class="section-title">Contacto</h2>
-          <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+          <p class="section-subtitle">¿Tienes una idea? Vamos a construirla.</p>
         </div>
-        
-        <div class="contact-content">
-          <form id="contact-form" class="contact-form glass fade-in delay-1" 
-      action="https://formsubmit.co/sanxcruro122@gmail.com" 
-      method="POST"
-      aria-label="Formulario de contacto">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
-  <input type="hidden" name="_next" value="https://www.rodnix.com.mx/gracias.html">
-  
-  <div class="form-group">
-    <input type="text" id="name" name="name" placeholder=" " required>
-    <label for="name">Nombre completo</label>
-  </div>
-  
-  <div class="form-group">
-    <input type="email" id="email" name="email" placeholder=" " required>
-    <label for="email">Correo electrónico</label>
-  </div>
-  
-  <div class="form-group">
-    <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
-    <label for="message">Tu mensaje</label>
-  </div>
-  
-  <button type="submit" class="btn btn-primary">
-    <i class="fas fa-paper-plane"></i> Enviar mensaje
-  </button>
-  
-  <div id="form-response" class="form-response"></div>
-  </form>
-
-            <!-- Mensaje de éxito (oculto inicialmente) -->
-          <div id="success-message" class="success-message" style="display: none;">
-            <div class="success-content">
-              <i class="fas fa-check-circle"></i>
-              <h3>¡Mensaje enviado con éxito!</h3>
-              <p>Gracias por contactarme. Te responderé lo antes posible.</p>
-              <button id="close-success" class="btn btn-secondary">Volver</button>
+        <div class="contact-content" style="display:flex; gap:2rem; flex-wrap:wrap;">
+          <div style="flex:1; min-width:260px;">
+            <div class="about-content">
+              <h3>¿Listo para empezar?</h3>
+              <p>En Rodnix no vendemos plantillas: desarrollamos soluciones únicas que encajan con tu negocio y tus metas.</p>
+              <p><strong>Correo:</strong> <a href="mailto:sanxcruro122@gmail.com">sanxcruro122@gmail.com</a><br>
+                 <strong>WhatsApp:</strong> <a href="https://wa.me/525626116825" target="_blank">+52 56 2611 6825</a></p>
+              <p><strong>Ubicación:</strong> Jilotepec, Estado de México</p>
+              <a href="mailto:sanxcruro122@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Escribe ahora</a>
             </div>
-          </div>          
-          <div class="contact-info glass fade-in delay-2">
-            <h3>Información de contacto</h3>
-            
-            <ul class="contact-details">
-              <li>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:sanxcruro122@gmail.com">sanxcruro122@gmail.com</a>
-              </li>
-              <li>
-                <i class="fas fa-phone-alt"></i>
-                <a href="tel:+525626116825">+52 56 2611 6825</a>
-              </li>
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <address>
-                  Jilotepec, Estado de México, México
-                </address>
-              </li>
-            </ul>
-            
-            <div class="social-links">
-  <p class="social-title">Encuéntrame en:</p>
-  <ul class="social-list">
-    <li class="social-item">
-      <a href="https://github.com/Elrorro334" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <i class="fab fa-github social-icon"></i>
-        <span class="social-name">GitHub</span>
-      </a>
-    </li>
-    <li class="social-item">
-      <a href="https://www.linkedin.com/in/rodrigo-sanchez-cruz-925785327" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in social-icon"></i>
-        <span class="social-name">LinkedIn</span>
-      </a>
-    </li>
-    <li class="social-item">
-      <a href="https://www.instagram.com/el_rorro334/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <i class="fab fa-instagram social-icon"></i>
-        <span class="social-name">Instagram</span>
-      </a>
-    </li>
-    <li class="social-item">
-      <a href="https://www.facebook.com/share/16w557j783/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <i class="fab fa-facebook social-icon"></i>
-        <span class="social-name">Facebook</span>
-      </a>
-    </li>
-    <li class="social-item">
-      <a href="https://wa.me/525626116825" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp social-icon"></i>
-        <span class="social-name">WhatsApp</span>
-      </a>
-    </li>
-  </ul>
-</div>
+          </div>
+          <div style="flex:1; min-width:260px;">
+            <div class="project-info" style="background:#fff; border-radius:12px; padding:1.5rem; box-shadow: var(--shadow);">
+              <h3>Solicita una cotización</h3>
+              <p>Rellena los datos y te contacto en menos de 24h.</p>
+              <a href="mailto:sanxcruro122@gmail.com?subject=Quiero%20una%20cotización" class="btn btn-secondary"><i class="fas fa-file-alt"></i> Pedir cotización</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <!-- Pie de página -->
-  <footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
+
+  <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <p>&copy; <span id="current-year">2025</span> Rodrigo Sánchez Cruz. Todos los derechos reservados.</p>
-        <p>Diseñado por Rodrigo Sánchez Cruz</p>
-      </div>
+      <div data-include="footer"></div>
     </div>
   </footer>
-<script src="script.js"></script>
-<script>
-  // Bloquear clic derecho e inspección (anti-curiosos nivel básico)
-  document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
-  document.onkeydown = function (e) {
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey && e.shiftKey && e.key === "I") ||
-      (e.ctrlKey && e.shiftKey && e.key === "J") ||
-      (e.ctrlKey && e.key === "U") ||
-      (e.ctrlKey && e.shiftKey && e.key === "C")
-    ) { return false; }
-  };
-</script>
+
+  <script src="include.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
