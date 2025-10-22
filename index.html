@@ -7,28 +7,29 @@
   <meta name="description" content="Rodnix convierte tu idea en una app o sitio web personalizado. Desarrollo full stack, móvil y consultoría tecnológica en México.">
   
   <link rel="icon" href="images/logoRODNIX.jpg" type="image/x-icon" />
-  <link rel="icon" href="images/logoRODNIX.jpg" type="image/png" /> <link rel="apple-touch-icon" href="images/logo-apple-touch.png" /> <link rel="canonical" href="https://www.rodnix.com.mx/">
+  <link rel="icon" href="images/logoRODNIX.jpg" type="image/png" />
+  <link rel="apple-touch-icon" href="images/logo-apple-touch.png" />
+  
+  <link rel="canonical" href="https://www.rodnix.com.mx/">
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css"/>
+  
+  <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
   <header class="header" aria-label="Navegación principal">
     <div data-include="header"></div>
   </header>
+
   <main>
     <section class="hero" id="home">
       <div class="container hero-container">
         <div class="hero-content">
-<<<<<<< HEAD
           <h1 class="hero-title">RODNIX</h1>
           <p class="hero-subtitle">Convertimos tu idea en una aplicación o sitio web a medida. Desarrollo full stack, móvil y consultoría tecnológica.</p>    
-=======
-          <h1 class="hero-title">Rodnix</h1>
-          <p class="hero-subtitle">Convertimos tu idea en una aplicación o sitio web a medida. Desarrollo full stack, móvil y consultoría tecnológica.</p>
->>>>>>> f84f8bb8fc8bf91687548d952f0db993ee2ad5cc
           <div class="hero-cta">
             <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Hablemos</a>
             <a href="#projects" class="btn btn-secondary"><i class="fas fa-rocket" aria-hidden="true"></i> Ver portafolio</a>
@@ -41,7 +42,7 @@
       </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section animate-on-scroll" id="services">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Qué hacemos</h2>
@@ -80,7 +81,7 @@
       </div>
     </section>
 
-    <section class="section projects" id="projects">
+    <section class="section projects animate-on-scroll" id="projects">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Proyectos destacados</h2>
@@ -115,14 +116,14 @@
       </div>
     </section>
 
-    <section class="section contact" id="contact">
+    <section class="section contact animate-on-scroll" id="contact">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Contacto</h2>
           <p class="section-subtitle">¿Tienes una idea? Vamos a construirla.</p>
         </div>
-        <div class="contact-content" style="display:flex; gap:2rem; flex-wrap:wrap;">
-          <div style="flex:1; min-width:260px;">
+        <div class="contact-content">
+          <div class="contact-item">
             <div class="about-content">
               <h3>¿Listo para empezar?</h3>
               <p>En Rodnix no vendemos plantillas: desarrollamos soluciones únicas que encajan con tu negocio y tus metas.</p>
@@ -134,28 +135,28 @@
                 <h4 class="social-title">Mis redes</h4>
                 <ul class="social-list">
                   <li class="social-item">
-                    <a href="https://github.com/tu-usuario-github" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mi perfil de GitHub">
+                    <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mi perfil de GitHub">
                       <i class="fab fa-github social-icon github" aria-hidden="true"></i>
                       <span class="social-name">GitHub</span>
                     </a>
                   </li>
                   <li class="social-item">
-                    <a href="https://linkedin.com/in/tu-usuario-linkedin" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mi perfil de LinkedIn">
+                    <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mi perfil de LinkedIn">
                       <i class="fab fa-linkedin-in social-icon linkedin-in" aria-hidden="true"></i>
                       <span class="social-name">LinkedIn</span>
                     </a>
                   </li>
-                  </ul>
+                </ul>
               </div>
-
-              <a href="mailto:sanxcruro122@gmail.com" class="btn btn-primary" style="margin-top: 1.5rem;"><i class="fas fa-envelope" aria-hidden="true"></i> Escribe ahora</a>
+              
+              <a href="mailto:sanxcruro122@gmail.com" class="btn btn-primary" style="margin-top: 1rem;"><i class="fas fa-envelope" aria-hidden="true"></i> Escribe ahora</a>
             </div>
           </div>
-          <div style="flex:1; min-width:260px;">
+          <div class="contact-item">
             <div class="about-content">
               <h3>Solicita una cotización</h3>
               <p>Rellena los datos y te contacto en menos de 24h.</p>
-              <a href="mailto:sanxcruro122@gmail.com?subject=Quiero%20una%20cotización" class="btn btn-secondary"><i class="fas fa-file-alt" aria-hidden="true"></i> Pedir cotización</a>
+              <a href="mailto:sanxcruro122@gmail.com?subject=Quiero%20una%20cotización" class="btn btn-secondary" style="margin-top: 1rem;"><i class="fas fa-file-alt" aria-hidden="true"></i> Pedir cotización</a>
             </div>
           </div>
         </div>
@@ -168,7 +169,8 @@
       <div data-include="footer"></div>
     </div>
   </footer>
-  <script src="include.js" defer></script>
+
   <script src="script.js" defer></script>
+  <script src="include.js" defer></script>
 </body>
 </html>

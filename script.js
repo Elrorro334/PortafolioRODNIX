@@ -1,12 +1,7 @@
-// script.js
-
-// ------------------ Bloqueo de inspección básico (no infalible) ------------------
-
-// Bloquear clic derecho
+// Desactivar menú contextual y F12 (Tu código original)
 document.addEventListener('contextmenu', function (e) {
   e.preventDefault();
 });
-
 document.addEventListener('keydown', (e) => {
   if (
     e.key === 'F12' ||
@@ -17,8 +12,6 @@ document.addEventListener('keydown', (e) => {
     e.stopPropagation();
   }
 });
-
-// Sobrescribir posibles reversiones mínimas
 document.oncontextmenu = function () { return false; };
 document.onkeydown = function (e) {
   if (
@@ -52,12 +45,12 @@ function setActiveNavFromPath() {
 function initMobileMenu() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
-  if (!menuToggle) return;
+  if (!menuToggle || !navLinks) return; // Más seguro
 
   const toggleMenu = () => {
     const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
     menuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
-    navLinks?.classList.toggle('active');
+    navLinks.classList.toggle('active');
     menuToggle.innerHTML = isExpanded
       ? '<i class="fas fa-bars"></i>'
       : '<i class="fas fa-times"></i>';
@@ -68,12 +61,12 @@ function initMobileMenu() {
 
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-      navLinks?.classList.remove('active');
-      if (menuToggle) {
+      if (navLinks.classList.contains('active')) { // Solo cerrar si está abierto
+        navLinks.classList.remove('active');
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        document.body.style.overflow = 'auto';
       }
-      document.body.style.overflow = 'auto';
     });
   });
 }
@@ -134,12 +127,14 @@ function scrollEffects() {
   const sections = document.querySelectorAll('section');
   const navItems = document.querySelectorAll('.nav-link');
   const header = document.querySelector('.header');
+  
+  if (!header) return; // Comprobación de seguridad
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
-      header?.classList.add('scrolled');
+      header.classList.add('scrolled');
     } else {
-      header?.classList.remove('scrolled');
+      header.classList.remove('scrolled');
     }
 
     let currentSection = '';
@@ -153,7 +148,8 @@ function scrollEffects() {
 
     navItems.forEach(item => {
       item.classList.remove('active');
-      if (item.getAttribute('href') === `#${currentSection}`) {
+      const itemHref = item.getAttribute('href');
+      if (itemHref && itemHref.includes(`#${currentSection}`)) { // Comprobación más robusta
         item.classList.add('active');
       }
     });
@@ -164,12 +160,32 @@ function scrollEffects() {
 }
 
 function scrollAnimations() {
+  // Esta es la nueva función de animación de scroll que añadimos
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Tu función original (la dejo por si la usas en otro lado, pero la de arriba es mejor)
   const animateElements = document.querySelectorAll(
     '.fade-in, .project-card, .about-content, .contact-form, .contact-info'
   );
 
   const checkPosition = () => {
     animateElements.forEach(el => {
+      // Evitar doble animación si ya usa .animate-on-scroll
+      if (el.classList.contains('animate-on-scroll')) return; 
+      
       const elementTop = el.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
@@ -181,6 +197,7 @@ function scrollAnimations() {
   };
 
   animateElements.forEach(el => {
+    if (el.classList.contains('animate-on-scroll')) return;
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -190,6 +207,7 @@ function scrollAnimations() {
   window.addEventListener('load', checkPosition);
   checkPosition();
 }
+
 
 function contactForm() {
   const form = document.getElementById('contact-form');
@@ -310,6 +328,7 @@ function backToTop() {
 
 // ------------------ Inicialización ------------------
 
+// ESTA ES LA FUNCIÓN "MAESTRA" QUE SERÁ LLAMADA POR include.js
 function initAll() {
   setActiveNavFromPath();
   initMobileMenu();
@@ -320,7 +339,3 @@ function initAll() {
   updateYear();
   backToTop();
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  initAll();
-});

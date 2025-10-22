@@ -17,8 +17,15 @@ async function includeHTML() {
     }
   }));
 
-  // Después de incluir, inicializa lo que depende del DOM insertado
-  if (typeof setActiveNavFromPath === 'function') setActiveNavFromPath();
-  if (typeof initMobileMenu === 'function') initMobileMenu();
+  //
+  // --- CAMBIO IMPORTANTE ---
+  //
+  // Después de incluir todo el HTML, AHORA SÍ, inicializa todo el JS.
+  if (typeof initAll === 'function') {
+    initAll(); 
+  } else {
+    console.error("Error: La función initAll() no se encontró. Asegúrate de que script.js esté cargado ANTES que include.js");
+  }
 }
+
 document.addEventListener('DOMContentLoaded', includeHTML);
