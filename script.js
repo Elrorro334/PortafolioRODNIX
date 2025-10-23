@@ -339,3 +339,49 @@ function initAll() {
   updateYear();
   backToTop();
 }
+/* --- Lógica para el Modal Pop-up de Ciberseguridad --- */
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Selecciona los elementos del nuevo modal por sus IDs
+  const modal = document.getElementById('security-modal');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+
+  // Si no encontramos el modal, no hacemos nada
+  if (!modal || !closeModalBtn) {
+    return;
+  }
+
+  // Función para abrir el modal
+  const openModal = () => {
+    modal.classList.add('active');
+  };
+
+  // Función para cerrar el modal
+  const closeModal = () => {
+    modal.classList.remove('active');
+  };
+
+  // --- Lógica de APERTURA ---
+  // Comprobar si ya se mostró en esta sesión
+  if (sessionStorage.getItem('modalShown') !== 'true') {
+    
+    // MODIFICADO: Mostrar el modal inmediatamente (sin delay)
+    openModal(); 
+    
+    // Marcar como mostrado para esta sesión
+    sessionStorage.setItem('modalShown', 'true');
+  }
+
+  // --- Lógica de CIERRE ---
+  // 1. Clic en el botón 'X'
+  closeModalBtn.addEventListener('click', closeModal);
+
+  // 2. Clic fuera del contenido (en el fondo .modal-glass)
+  modal.addEventListener('click', (e) => {
+    // Si el objetivo del clic es el fondo mismo
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+});
